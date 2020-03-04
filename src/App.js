@@ -23,7 +23,7 @@ function App() {
   return (
       <Router >
         <nav>
-        <div onClick={hide} hidden={!isVisible}>
+        <div hidden={!isVisible}>
           <button onClick={hide}>Close</button>
           Hello! Wanna add to homescreen?
           <button onClick={promptToInstall}>Add to homescreen</button>
