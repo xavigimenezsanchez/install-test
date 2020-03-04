@@ -1,19 +1,37 @@
-import React, {useState} from 'react';
+import React  from 'react';
+import {Link, BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import logo from './logo.svg';
+import One from './One';
+import Two from './Two';
 import './App.css';
 
 
-function App({}) {
-  const [dummy, setDummy] = useState(0)
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+function App() {
+  //const match = useRouteMatch();
+  //console.log(match.url)
 
-        <input id="intro" onChange={e=> setDummy(e.target.value)} type="number" />
-        <p>{dummy}</p>
-      </header>
-    </div>
+  return (
+    <Router>
+      <nav>
+        <ul>
+          <li>
+          <Link to="/one">One</Link>
+          </li>
+          <li>
+          <Link to="/two">Two</Link>
+          </li>
+        </ul>
+      </nav>
+      <Switch>
+        <Route path="/one">
+          <One />
+        </Route>
+        <Route path="/two">
+          <Two />
+        </Route>
+      </Switch>
+      
+    </Router>
   );
 }
 
