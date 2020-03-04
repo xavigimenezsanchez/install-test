@@ -24,20 +24,24 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <style>
-      .add-button {
-          position: absolute;
-          top: 1px;
-          left: 1px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%//banner.css"/>
     <title>React App</title>
 
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <button class="add-button">Add to home screen</button>
+    
+
+    <div class="banner">
+      <section>
+        <p>Get our free app. It won't tale up space on your phone</p>
+        <a class="btn-bgstroke add-button">Install app</a>
+      </section>
+    </div>
+
     <div id="root"></div>
+
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -50,12 +54,12 @@
     -->
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/service-worker.js");
+        navigator.serviceWorker.register("/install-test/service-worker.js");
       }
 
       let deferredPrompt;
       const addBtn = document.querySelector('.add-button');
-      addBtn.style.display = 'none';
+      addBtn.style.display = 'block';
 
       window.addEventListener('beforeinstallprompt', (e) => {
           // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -64,10 +68,11 @@
           deferredPrompt = e;
           // Update UI to notify the user they can add to home screen
           addBtn.style.display = 'block';
-          debugger
+          alert('beforeinstallpromt')
           addBtn.addEventListener('click', (e) => {
             // hide our user interface that shows our A2HS button
             addBtn.style.display = 'none';
+            alert('test')
             // Show the prompt
             deferredPrompt.prompt();
             // Wait for the user to respond to the prompt

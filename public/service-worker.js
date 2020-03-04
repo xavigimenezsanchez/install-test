@@ -9,6 +9,6 @@ self.addEventListener('install', (event) => {
   });
   
   self.addEventListener('fetch', function(event) {
-    // console.log('👷', 'fetch', event);
+    console.log('👷', 'fetch', event);
     event.respondWith(fetch(event.request));
   });
