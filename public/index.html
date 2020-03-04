@@ -35,7 +35,7 @@
     <div class="banner">
       <section>
         <p>Get our free app. It won't tale up space on your phone</p>
-        <a class="btn-bgstroke add-button">Install app</a>
+        <a class="btn-bgstroke install-button">Install app</a>
       </section>
     </div>
 
@@ -58,8 +58,9 @@
       }
 
       let deferredPrompt;
-      const addBtn = document.querySelector('.add-button');
-      addBtn.style.display = 'block';
+      const banner = document.querySelector('.banner');
+      const addBtn = document.querySelector(".install-button")
+      banner.style.display = 'block';
 
       window.addEventListener('beforeinstallprompt', (e) => {
           // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -67,11 +68,11 @@
           // Stash the event so it can be triggered later.
           deferredPrompt = e;
           // Update UI to notify the user they can add to home screen
-          addBtn.style.display = 'block';
+          banner.style.display = 'block';
           alert('beforeinstallpromt')
           addBtn.addEventListener('click', (e) => {
             // hide our user interface that shows our A2HS button
-            addBtn.style.display = 'none';
+            banner.style.display = 'none';
             alert('test')
             // Show the prompt
             deferredPrompt.prompt();
