@@ -7,31 +7,30 @@ import './App.css';
 
 
 function App() {
-  //const match = useRouteMatch();
-  //console.log(match.url)
-
+  
   return (
-    <Router>
-      <nav>
-        <ul>
-          <li>
-          <Link to="/one">One</Link>
-          </li>
-          <li>
-          <Link to="/two">Two</Link>
-          </li>
-        </ul>
-      </nav>
-      <Switch>
-        <Route path="/one">
-          <One />
-        </Route>
-        <Route path="/two">
-          <Two />
-        </Route>
-      </Switch>
-      
-    </Router>
+      <Router >
+        <nav>
+          <ul>
+            <li>
+            <Link to="/install-test/one">One</Link>
+            </li>
+            <li>
+            <Link to="/install-test/two">Two</Link>
+            </li>
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/install-test/one" component={One} />
+          <Route path="/install-test/two" component={Two} />
+          <Route path="/install-test">
+            <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+            </header>
+          </Route>
+        </Switch>
+        
+      </Router>
   );
 }
 
