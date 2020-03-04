@@ -35,6 +35,7 @@ p {
   text-align: center;
   background: #33cccc;
   color: white;
+  position: fixed;
 }
 
 
