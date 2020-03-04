@@ -1,5 +1,6 @@
 self.addEventListener('install', (event) => {
     console.log('👷', 'install', event);
+    alert('install worker')
     self.skipWaiting();
   });
   
