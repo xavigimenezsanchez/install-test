@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c10de893fe5e9a6a0ec4fd1e389dbd9a",
+    "revision": "969b385d66aa9d5ef3bc7a27d5d00082",
     "url": "/install-test/index.html"
   },
   {
-    "revision": "8f44bc5b8e933b604380",
-    "url": "/install-test/static/css/main.dfb93343.chunk.css"
+    "revision": "1bd4a2870741752ad5a8",
+    "url": "/install-test/static/css/main.3ec3ea80.chunk.css"
   },
   {
     "revision": "882081eab51d62c07f53",
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/install-test/static/js/2.93d2207a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f44bc5b8e933b604380",
-    "url": "/install-test/static/js/main.d811c1d6.chunk.js"
+    "revision": "1bd4a2870741752ad5a8",
+    "url": "/install-test/static/js/main.55d61f34.chunk.js"
   },
   {
     "revision": "43979ff7fccc31d0ecaa",
     "url": "/install-test/static/js/runtime-main.476e1529.js"
   },
   {
-    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "/install-test/static/media/logo.5d5d9eef.svg"
+    "revision": "ee7cd8ed2dcec943251eb2763684fc6f",
+    "url": "/install-test/static/media/logo.ee7cd8ed.svg"
   }
 ]);
