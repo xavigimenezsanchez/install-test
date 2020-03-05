@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/install-test/static/css/main.f37b5351.chunk.css",
-    "main.js": "/install-test/static/js/main.d811c1d6.chunk.js",
-    "main.js.map": "/install-test/static/js/main.d811c1d6.chunk.js.map",
+    "main.css": "/install-test/static/css/main.2ee9a853.chunk.css",
+    "main.js": "/install-test/static/js/main.c0ffe391.chunk.js",
+    "main.js.map": "/install-test/static/js/main.c0ffe391.chunk.js.map",
     "runtime-main.js": "/install-test/static/js/runtime-main.476e1529.js",
     "runtime-main.js.map": "/install-test/static/js/runtime-main.476e1529.js.map",
     "static/js/2.93d2207a.chunk.js": "/install-test/static/js/2.93d2207a.chunk.js",
     "static/js/2.93d2207a.chunk.js.map": "/install-test/static/js/2.93d2207a.chunk.js.map",
     "index.html": "/install-test/index.html",
-    "precache-manifest.0fbb0b4cf277ba822fab98ac5f6183bf.js": "/install-test/precache-manifest.0fbb0b4cf277ba822fab98ac5f6183bf.js",
+    "precache-manifest.09d11c369731eb6a7660dc8ab0debba6.js": "/install-test/precache-manifest.09d11c369731eb6a7660dc8ab0debba6.js",
     "service-worker.js": "/install-test/service-worker.js",
-    "static/css/main.f37b5351.chunk.css.map": "/install-test/static/css/main.f37b5351.chunk.css.map",
+    "static/css/main.2ee9a853.chunk.css.map": "/install-test/static/css/main.2ee9a853.chunk.css.map",
     "static/js/2.93d2207a.chunk.js.LICENSE.txt": "/install-test/static/js/2.93d2207a.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/install-test/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.476e1529.js",
     "static/js/2.93d2207a.chunk.js",
-    "static/css/main.f37b5351.chunk.css",
-    "static/js/main.d811c1d6.chunk.js"
+    "static/css/main.2ee9a853.chunk.css",
+    "static/js/main.c0ffe391.chunk.js"
   ]
 }
