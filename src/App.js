@@ -9,7 +9,7 @@ import './App.css';
 
 function App() {
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
-  const [isVisible, setVisibleState] = useState(true);
+  const [isVisible, setVisibleState] = useState(false);
   const hide = () => setVisibleState(false);
 
   useEffect(
@@ -23,7 +23,7 @@ function App() {
   return (
       <Router >
         <nav>
-        <div onClick={hide} hidden={!isVisible}>
+        <div  hidden={!isVisible}>
           <button onClick={hide}>Close</button>
           Hello! Wanna add to homescreen?
           <button onClick={promptToInstall}>Add to homescreen</button>
@@ -46,7 +46,6 @@ function App() {
             </header>
           </Route>
         </Switch>
-        
       </Router>
   );
 }
