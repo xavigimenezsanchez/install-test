@@ -1,13 +1,14 @@
-import * as React from "react";
+import {useEffect, useState}  from "react";
 export function useAddToHomescreenPrompt() {
-    const [prompt, setState] = React.useState(null);
+    const [prompt, setState] = useState(null);
     const promptToInstall = () => {
         if (prompt) {
             return prompt.prompt();
         }
         return Promise.reject(new Error('Tried installing before browser sent "beforeinstallprompt" event'));
     };
-    React.useEffect(() => {
+
+    useEffect(() => {
         const ready = (e) => {
             e.preventDefault();
             setState(e);

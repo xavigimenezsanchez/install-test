@@ -10,24 +10,30 @@ import './App.css';
 function App() {
   const [prompt, promptToInstall] = useAddToHomescreenPrompt();
   const [isVisible, setVisibleState] = useState(false);
-  const hide = () => setVisibleState(false);
+  const [installer, setInstallerState] = useState(prompt);
+  const hide = () => setVisibleState(true);
 
   useEffect(
     () => {
       if (prompt) {
         setVisibleState(true);
+      } else {
+        hide();
       }
     },
     [prompt]
   );
+  const install = () => {
+    promptToInstall().finaly(() => {setInstallerState(null); hide()})
+  }
   return (
       <Router >
         <nav>
-        <div  hidden={!isVisible}>
-          <button onClick={hide}>Close</button>
-          Hello! Wanna add to homescreen?
-          <button onClick={promptToInstall}>Add to homescreen</button>
-        </div>
+          <div  hidden={!isVisible}>
+            <button onClick={hide}>Close</button>
+              Hello! Wanna add to homescreen?
+            <button onClick={install}>Add to homescreen</button>
+          </div>
           <ul>
             <li>
             <Link to="/install-test/one">One</Link>
