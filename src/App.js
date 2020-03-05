@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react';
+import React  from 'react';
 import {Link, BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { useAddToHomescreenPrompt } from "./useAddToHomescreenPrompt.js";
 import logo from './logo.svg';
@@ -8,26 +8,18 @@ import './App.css';
 
 
 function App() {
-  const [prompt, promptToInstall] = useAddToHomescreenPrompt();
-  const [isVisible, setVisibleState] = useState(true);
-  const hide = () => setVisibleState(false);
+  const [isVisible, setVisible, promptToInstall] = useAddToHomescreenPrompt();
+  const hide = () => { setVisible(false)};
 
-  useEffect(
-    () => {
-      if (prompt) {
-        setVisibleState(true);
-      }
-    },
-    [prompt]
-  );
+
   return (
       <Router >
         <nav>
-        <div hidden={!isVisible}>
-          <button onClick={hide}>Close</button>
-          Hello! Wanna add to homescreen?
-          <button onClick={promptToInstall}>Add to homescreen</button>
-        </div>
+          <div  hidden={!isVisible}>
+            <button onClick={hide}>Close</button>
+              Hello! Wanna add to homescreen?
+            <button onClick={promptToInstall}>Add to homescreen</button>
+          </div>
           <ul>
             <li>
             <Link to="/install-test/one">One</Link>
@@ -46,7 +38,6 @@ function App() {
             </header>
           </Route>
         </Switch>
-        
       </Router>
   );
 }
