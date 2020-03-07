@@ -29,5 +29,5 @@ jobs:
       run: |
         git config --global user.email "javiergimenezsanchez@gmail.com"
         git config --global user.name "xavigimenezsanchez"
-        git remote set-url origin https://${{ secrets.TokenHook }}@ggithub.com/xavigimenezsanchez/install-test.git
+        git remote set-url origin https://${{ secrets.TokenHook }}@github.com/xavigimenezsanchez/install-test.git
         npm run deploy
